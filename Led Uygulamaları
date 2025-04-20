@@ -1,1 +1,160 @@
 ...
+İLKİ FLİP FLOP UMSU 
+
+void setup() {
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+}
+
+
+void loop() {
+  digitalWrite(8, HIGH);                      
+  digitalWrite(9, LOW);
+  digitalWrite(10, LOW);   
+  delay(500);                           
+  digitalWrite(9, HIGH);
+  digitalWrite(8, LOW);
+  digitalWrite(10, LOW);   
+  delay(500); 
+  digitalWrite(10, HIGH);                      
+  digitalWrite(8, LOW);
+  digitalWrite(9, LOW);   
+  delay(500);                  
+}
+
+
+
+
+
+
+
+LED 
+
+
+void setup() {
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(12,OUTPUT);
+}
+
+int aracledleri[] = {10,9,8};
+int yayaledleri[]= {12,11};
+
+
+void tumLedsKapat() {
+  for (int i = 0; i < 3; i++) {
+    digitalWrite(aracledleri[i], LOW);
+  }
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(yayaledleri[i], LOW);
+  }
+}
+
+void loop() {
+  
+ //yaya yeşil diğeri kırmızı 
+delay(1000);
+tumLedsKapat();
+digitalWrite(aracledleri[0],HIGH);
+digitalWrite(yayaledleri[0],HIGH);
+delay(1000);
+digitalWrite(yayaledleri[0],LOW);
+digitalWrite(yayaledleri[1],HIGH);
+delay(2000);
+
+//sarı yanıyor diğeri kırmızı
+tumLedsKapat();
+digitalWrite(yayaledleri[0],HIGH);
+digitalWrite(aracledleri[1],HIGH);
+delay(2000);
+
+//yeşil yanıyor diğeri kırmızı
+tumLedsKapat();
+digitalWrite(yayaledleri[0],HIGH);
+digitalWrite(aracledleri[2],HIGH);
+delay(2000);
+}
+
+çarkıfelek 
+
+int ledler[] = {12,11,10,9,8,7};
+void setup() {
+
+  for (int i= 0; i < 6; i++){
+    pinMode(ledler[i],OUTPUT);
+  }
+}
+
+void loop(){
+  for (int i = 0; i < 6; i++){
+    digitalWrite(ledler[i],HIGH);
+    delay(500);
+    digitalWrite(ledler[i],LOW);
+  }
+}
+
+------------------------------------------çarkıfelek 2-----------------------------------
+
+int ledler[] = {12,11,10,9,8,7};
+const int wait = 150;
+void setup() {
+
+  for (int i= 0; i < 6; i++){
+    pinMode(ledler[i],OUTPUT);
+  }
+}
+
+void loop(){
+  for (int i = 0; i < 6; i++){
+    digitalWrite(ledler[i],HIGH);
+    delay(wait);
+    digitalWrite(ledler[i],LOW);
+  }
+  for (int i = 5; i >=0; i--){
+    digitalWrite(ledler[i],HIGH);
+    delay(wait);
+    digitalWrite(ledler[i],LOW);
+  }
+}
+-------------------------------------------------------------------------------
+RGB LED
+
+ÇALIŞMADI DELİRCEM
+int red=9;
+int green=10;
+int blue=11;
+int time=1000;
+void setup(){
+
+  pinMode(red,OUTPUT);
+  pinMode(green,OUTPUT);
+  pinMode(blue,OUTPUT);
+
+}
+
+void loop(){
+
+  digitalWrite(red,HIGH);
+  delay(time);
+  digitalWrite(red,LOW);
+  digitalWrite(green,HIGH);
+  delay(time);
+  digitalWrite(green,LOW);
+  digitalWrite(blue,HIGH);
+  delay(time);
+  //hepsini açıyoruz tüm renkler açıkken rgb led nasıl yanar deniyoruz
+  digitalWrite(green,HIGH);
+  digitalWrite(red,HIGH);
+  delay(time);
+ //buradan itibaren hepsini kapatıyoruz
+  digitalWrite(green,LOW);
+  digitalWrite(blue,LOW);
+  digitalWrite(red,LOW);
+  delay(time);
+}
+
+
+
