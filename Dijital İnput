@@ -1,0 +1,76 @@
+void setup(){
+pinMode(13,INPUT_PULLUP);
+}
+
+void loop()
+{
+
+}
+tek led yapmalı örnek 
+-----------------------------------------------------
+
+int ledPin = 9;
+int buttonPin = 10;
+
+void setup(){
+pinMode(ledPin,OUTPUT);
+pinMode(buttonPin,INPUT);
+
+}
+
+void loop()
+{
+int deger = digitalRead(buttonPin);
+if (deger==HIGH)
+digitalWrite(ledPin,HIGH);
+else 
+digitalWrite(ledPin,LOW);
+}
+YAPTIM AMA NOLDU
+basınca yanar
+bu videoda direç ve jumerın yeri değiştirilierek pull up pull down a çevriliyor tarzı bir şey yapıllıyor anlamadım bu videoya tekrar bak
+kablolar niye böyle anlamadım ayrıca jumper kablı nasıl küçültülüyor öyle
+------------------------------------------------------------------------------
+basınca kapanır
+
+
+int ledPin = 9;
+int buttonPin = 10;
+
+void setup(){
+pinMode(ledPin,OUTPUT);
+pinMode(buttonPin,INPUT_PULLUP);
+
+}
+
+void loop()
+{
+int deger = digitalRead(buttonPin);
+if (deger==HIGH)
+digitalWrite(ledPin,HIGH);
+else 
+digitalWrite(ledPin,LOW);
+}
+BEN BU BUTONA DELRCEM
+------------------------------------------------------------------------YERLERİ DE DEĞİŞTİROYRUZ Bİ ŞEKİL---------------------------------
+int ledPin = 9;
+int buttonPin = 10;
+int buttonPin2=11;
+
+void setup(){
+pinMode(ledPin,OUTPUT);
+pinMode(buttonPin,INPUT);
+pinMode(buttonPin2,INPUT);
+
+}
+
+void loop()
+{
+int deger = digitalRead(buttonPin);
+int deger2 = digitalRead(buttonPin2);
+if (deger==HIGH)
+digitalWrite(ledPin,HIGH);
+else if (deger2==HIGH);
+digitalWrite(ledPin,LOW);
+}
+-----------------------------------ÇALIŞMAYAN ŞEY BOZUKKK------------------
