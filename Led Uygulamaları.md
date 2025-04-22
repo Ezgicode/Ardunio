@@ -22,13 +22,13 @@ void loop() {
   delay(500);                  
 }
 
-![Led GIF](gifler/flipflop.gif)
 
 <img src="gifler/flipflop.gif" width="300">
 
 
 
 
+<img src="gifler/flipflop.gif" width="300" style="transform: scaleX(-1);">
 
 
 
