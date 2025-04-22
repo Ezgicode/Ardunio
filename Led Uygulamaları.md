@@ -24,6 +24,8 @@ void loop() {
 
 ![Led GIF](gifler/flipflop.gif)
 
+<img src="gifler/flipflop.gif" width="300">
+
 
 
 
