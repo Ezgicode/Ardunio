@@ -22,7 +22,8 @@ void loop() {
   delay(500);                  
 }
 
-![Led GIF](gifler/flipflop-ezgif.com-video-to-g.gif)
+![Led GIF](gifler/flipflop.gif)
+
 
 
 
